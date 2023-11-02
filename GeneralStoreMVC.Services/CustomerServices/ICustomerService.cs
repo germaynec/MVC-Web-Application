@@ -8,9 +8,10 @@ namespace GeneralStoreMVC.Services.CustomerServices;
 
 public interface ICustomerService
 {
-    Task<CustomerIndex> CreateNewCustomerAsync(CustomerCreate request);
+    Task<CustomerIndex?> CreateNewCustomerAsync(CustomerCreate request);
     Task<List<CustomerIndex>> GetAllCustomersAsync();
-    Task<CustomerDetail> GetCustomerByIdAsync(int id);
+    Task<CustomerDetail?> GetCustomerByIdAsync(int id);
     Task<bool> EditCustomerInfoAsync(CustomerEdit request);
     Task<bool> DeleteCustomerAsync(int id);
+    Task<CustomerEdit?> GetCustomerByIdForEditAsync(int id);
 }

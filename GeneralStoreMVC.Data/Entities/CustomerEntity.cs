@@ -18,6 +18,5 @@ public class CustomerEntity
     [Required, EmailAddress, MaxLength(100)]
     public string Email { get; set; } = string.Empty;
 
-    [JsonIgnore]
     public virtual List<TransactionEntity>? Transactions { get; set; }
 }

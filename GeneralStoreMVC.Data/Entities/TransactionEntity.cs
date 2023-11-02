@@ -21,9 +21,9 @@ public class TransactionEntity
 
     [ForeignKey(nameof(Customer))]
     public int CustomerId { get; set; }
-    public virtual CustomerEntity Customer { get; set; } 
+    public virtual CustomerEntity? Customer { get; set; } 
 
     [ForeignKey(nameof(Product))]
     public int ProductId { get; set; }
-    public virtual ProductEntity Product { get; set; }
+    public virtual ProductEntity? Product { get; set; }
 }

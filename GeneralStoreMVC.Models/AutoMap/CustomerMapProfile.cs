@@ -14,6 +14,7 @@ public class CustomerMapProfile : Profile
     {
         CreateMap<CustomerEntity, CustomerDetail>();
         CreateMap<CustomerEntity, CustomerIndex>();
+        CreateMap<CustomerEntity, CustomerEdit>();
 
         CreateMap<CustomerCreate, CustomerEntity>();
         CreateMap<CustomerEdit, CustomerEntity>();

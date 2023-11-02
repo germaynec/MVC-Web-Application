@@ -2,17 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace GeneralStoreMVC.Data.Entities;
+namespace GeneralStoreMVC.Models.ProductModels;
 
-public class ProductEntity
+public class ProductEdit
 {
-    [Key]
+    [Required]
     public int Id { get; set; }
 
     [Required, MinLength(3), MaxLength(200)]
+    [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
     public string Name { get; set; } = string.Empty;
 
     [Required]
@@ -21,6 +21,4 @@ public class ProductEntity
 
     [Required]
     public double Price { get; set; }
-
-    public virtual List<TransactionEntity>? Transactions { get; set; }
 }
