@@ -1,14 +1,16 @@
 using GeneralStoreMVC.Data;
 using GeneralStoreMVC.Models.AutoMap;
+using GeneralStoreMVC.Services.CustomerServices;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<GeneralStoreDbContext>(options => options.UseSqlServer(
-    builder.Configuration.GetConnectionString("GeneralStoreLocalDb")
+    builder.Configuration.GetConnectionString("GeneralStoreLocalDb:")
 ));
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddAutoMapper(typeof(CustomerMapProfile));
 
 var app = builder.Build();
