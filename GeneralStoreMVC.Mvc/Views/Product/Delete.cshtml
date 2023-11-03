@@ -1,14 +1,16 @@
 @model GeneralStoreMVC.Models.ProductModels.ProductDetail
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Delete A Product";
 }
 
-<h1>Delete</h1>
+<h1>Delete request for  @Model.Name </h1>
+<br />
 
 <h3>Are you sure you want to delete this?</h3>
+<br/>
 <div>
-    <h4>ProductDetail</h4>
+    <h4 class ="text-center">Information for @Model.Name</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -39,6 +41,6 @@
     
     <form asp-action="Delete">
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index" class="text-danger">Back to List</a>
     </form>
 </div>

@@ -1,15 +1,13 @@
 @model IEnumerable<GeneralStoreMVC.Models.ProductModels.ProductIndex>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Product Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-center">All Products at BL's General Store</h1>
+<a class="text-warning" asp-action="Create">Add new Inventory</a>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table table-striped-colums table-dark table-hover table-bordered border-danger">
     <thead>
         <tr>
             <th>
@@ -42,10 +40,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            <td class = "text-info">
+                <a asp-controller="Product" asp-action="Edit" asp-route-id="@item.Id" class="text-danger">Edit</a> |
+                <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id" class="text-warning">Details</a> |
+                <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" class="text-success">Delete</a> 
             </td>
         </tr>
 }

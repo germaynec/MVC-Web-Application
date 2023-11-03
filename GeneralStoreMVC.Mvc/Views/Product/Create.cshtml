@@ -1,12 +1,11 @@
 @model GeneralStoreMVC.Models.ProductModels.ProductCreate
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Add a New Product";
 }
 
-<h1>Create</h1>
+<h1>Create a new Product</h1>
 
-<h4>ProductCreate</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -27,10 +26,13 @@
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
+            <br />
+            <hr />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+        <br />
     </div>
 </div>
 
@@ -39,5 +41,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

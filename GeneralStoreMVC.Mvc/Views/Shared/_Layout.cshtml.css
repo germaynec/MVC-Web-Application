@@ -3,7 +3,6 @@ for details on configuring this project to bundle and minify static web assets. 
 body{
   background-image: url(https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg);
 }
-
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -49,3 +48,5 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+

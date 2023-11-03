@@ -2,6 +2,7 @@ using GeneralStoreMVC.Data;
 using GeneralStoreMVC.Models.AutoMap;
 using GeneralStoreMVC.Services.CustomerServices;
 using GeneralStoreMVC.Services.ProductServices;
+using GeneralStoreMVC.Services.TransactionServices;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<GeneralStoreDbContext>(options => options.UseSqlSe
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddAutoMapper(typeof(CustomerMapProfile));
 builder.Services.AddAutoMapper(typeof(ProductMapProfile));
 
