@@ -59,6 +59,20 @@ public class TransactionController : Controller
         return View(transaction);
     }
 
+    [ActionName("CustomerTransactionDetails")]
+    public async Task<IActionResult> CustomerDetails(int id)
+    {
+        if (!ModelState.IsValid)
+            return View();
+
+        var transaction = await _transactionService.GetAllTransactionsForCustomerAsync(id);
+
+        if (transaction == null)
+            return RedirectToAction(nameof(Index));
+
+        return View(transaction);
+    }
+
     [HttpGet]
     public async Task<IActionResult> Edit(int id)
     {

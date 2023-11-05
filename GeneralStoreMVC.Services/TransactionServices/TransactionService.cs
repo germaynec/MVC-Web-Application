@@ -167,4 +167,31 @@ public class TransactionService : ITransactionService
 
         return transactionEntity is null ? null : _mapper.Map<TransactionEntity, TransactionEdit>(transactionEntity);
     }
+
+    public async Task<List<TransactionForCustomerDetail>> GetAllTransactionsForCustomerAsync(int customerId)
+    {
+        var transactions = await _dbContext.Transactions
+            .Where(entity => entity.CustomerId == customerId)
+            .Include(entity => entity.Product)
+            .Include(entity => entity.Customer)
+            .Select(entity => _mapper.Map<TransactionEntity, TransactionForCustomerDetail>(entity))
+            .ToListAsync();
+
+        double totalAmountSpent = transactions.Sum(transaction => transaction.TransactionTotal);
+
+        var summary = new CustomerTransactionSummary
+        {
+            Transactions = transactions,
+            TotalAmountSpent = totalAmountSpent
+        };
+
+        return summary;
+        
+    }
+
+    private class CustomerTransactionSummary : List<TransactionForCustomerDetail>
+    {
+        public List<TransactionForCustomerDetail> Transactions { get; set; }
+        public double TotalAmountSpent { get; set; }
+    }
 }

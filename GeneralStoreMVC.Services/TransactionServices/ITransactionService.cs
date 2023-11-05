@@ -14,4 +14,5 @@ public interface ITransactionService
     Task<bool> EditTransactionInfoAsync(TransactionEdit request);
     Task<bool> DeleteTransactionAsync(int id);
     Task<TransactionEdit?> GetTransactionByIdForEditAsync(int id);
+    Task<List<TransactionForCustomerDetail>> GetAllTransactionsForCustomerAsync(int customerId);
 }

@@ -14,6 +14,9 @@ public class TransactionMapProfile : Profile
         CreateMap<TransactionEntity, TransactionDetail>();
         CreateMap<TransactionEntity, TransactionIndex>();
         CreateMap<TransactionEntity, TransactionEdit>();
+        CreateMap<TransactionEntity, TransactionForCustomerDetail>()
+        .ForMember(dest => dest.TransactionTotal, opt => opt.MapFrom(src =>
+            src.Quantity * src.Product.Price));
 
         CreateMap<TransactionCreate, TransactionEntity>();
         CreateMap<TransactionEdit, TransactionEntity>();

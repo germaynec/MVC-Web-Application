@@ -37,6 +37,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action = "Edit" class="text-warning" asp-route-id=@Model.Id>Edit</a> |
+    <a asp-action = "Index" class="text-warning">Back To List</a>
 </div>
