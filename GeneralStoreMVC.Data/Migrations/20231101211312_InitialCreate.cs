@@ -75,15 +75,15 @@ namespace GeneralStoreMVC.Data.Migrations
                 columns: new[] { "Id", "Email", "Name" },
                 values: new object[,]
                 {
-                    { 1001, "batman4ever@wayne.org", "Wayne Enterprises" },
-                    { 1002, "scienceiscool@gmail.com", "Palmer Technology" },
-                    { 1003, "anvil4life@icloud.com", "ACME Incorporated" },
-                    { 1004, "thejokerrises@outlool.com", "Ace Chemicals" },
-                    { 1005, "greenarrow98@queenindustries.org", "Queen Industries" },
-                    { 1006, "greenarrow98@queenindustries.org", "Queen Industries" },
-                    { 1007, "ironman@marvel.org", "Tony Stark" },
-                    { 1008, "friendlyspider@marvel.org", "Peter Parker" },
-                    { 1009, "hulkoutgreen@marvel.org", "Bruce Banner" }
+                    { 1001, "LouietheDog@indy.gov", "Louie" },
+                    { 1002, "mowglithecat@yahoo.com", "Mowgli" },
+                    { 1003, "lionelthecat@indy.gov", "Lionel" },
+                    { 1004, "Miltonthecat@indy.gov", "Milton" },
+                    { 1005, "germayne.curry@yahoo.com", "Germayne" },
+                    { 1006, "Demetrius.sass@hotmail.com", "Dj" },
+                    { 1007, "Mikeward62@gmail.com", "Mike Ward" },
+                    { 1008, "Testemail@yahoo.com", "Test" },
+                    { 1009, "Jackson5@yahoo.com", "Michael Jackson" }
                 });
 
             migrationBuilder.InsertData(
@@ -91,17 +91,17 @@ namespace GeneralStoreMVC.Data.Migrations
                 columns: new[] { "Id", "Name", "Price", "QuantityInStock" },
                 values: new object[,]
                 {
-                    { 1001, "Apple Airpods Max", 499.99000000000001, 98 },
-                    { 1002, "Apple Airpods Pro", 199.99000000000001, 48 },
-                    { 1003, "Apple MacBook Pro 14 M3 Pro", 1999.99, 61 },
-                    { 1004, "Ipad Pro 12.9", 1299.99, 78 },
-                    { 1005, "Ipad 10.9 10th Gen", 499.99000000000001, 50 },
-                    { 1006, "Playstation 5", 499.99000000000001, 55 },
-                    { 1007, "The Amazing Spiderman 2", 69.989999999999995, 35 },
-                    { 1008, "Diablo IV", 69.989999999999995, 42 },
-                    { 1009, "Horizon Forbidden West Complete Edition", 69.989999999999995, 101 },
-                    { 1010, "PS5 Purple Controller", 69.989999999999995, 108 },
-                    { 1011, "Nintendo Switch", 299.99000000000001, 104 }
+                    { 1001, "Glock 19", 499.99000000000001, 98 },
+                    { 1002, "Duty Belt", 199.99000000000001, 48 },
+                    { 1003, "Police Car", 1999.99, 61 },
+                    { 1004, "X26 Taser", 1299.99, 78 },
+                    { 1005, "OCSC", 499.99000000000001, 50 },
+                    { 1006, "Glock 17", 499.99000000000001, 55 },
+                    { 1007, "Baton", 69.989999999999995, 35 },
+                    { 1008, "Mag Pouch", 69.989999999999995, 42 },
+                    { 1009, "Nylon Mag Pouch", 69.989999999999995, 101 },
+                    { 1010, "Radio Holster", 69.989999999999995, 108 },
+                    { 1011, "Body Camera", 299.99000000000001, 104 }
                 });
 
             migrationBuilder.InsertData(

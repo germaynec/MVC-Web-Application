@@ -1,38 +1,89 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GeneralStoreMVC.Mvc</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/GeneralStoreMVC.Mvc.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            background-image: url('https://haverblog-media.s3.amazonaws.com/wp-content/uploads/2021/10/15151055/blog-ethics-and-use-of-mathematics-aj-colores-unsplash-1-2240x1493.jpg');
+            background-size: cover;
+            color: white;
+            cursor: crosshair; /* Set the cursor to crosshair */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .navbar {
+            background-color: black !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            color: white;
+        }
+
+        .footer {
+            background-color: black;
+            color: white !important;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #ffc107;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer a:hover {
+            color: #007bff;
+        }
+    </style>
 </head>
-<body class="text-dark bg-success" bg-image= Url("https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg")>
+
+<body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-0">
             <div class="container-fluid">
-                <a class="navbar-brand text-primary" asp-area="" asp-controller="Home" asp-action="Index">BL General Store</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav w-100 justify-content-around">
                         <li class="nav-item">
-                            <a class="nav-link text-danger" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-warning" asp-area="" asp-controller="Customer" asp-action="Index">Customer</a>
+                            <a class="nav-link" asp-area="" asp-controller="Customer" asp-action="Index">Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-success" asp-area="" asp-controller="Transaction" asp-action="Index">Transactions</a>
+                            <a class="nav-link" asp-area="" asp-controller="Transaction" asp-action="Index">Transactions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-info" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
+                            <a class="nav-link" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -42,13 +93,13 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
-
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container text-warning">
-            &copy; 2023 - GeneralStoreMVC.Mvc - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-warning">Privacy</a>
+        <div class="container text-warning text-center">
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a href="https://www.facebook.com/your-facebook-page" target="_blank">Facebook</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -56,4 +107,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

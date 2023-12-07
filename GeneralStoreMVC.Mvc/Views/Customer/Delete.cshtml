@@ -5,32 +5,34 @@
     ViewData["Title"] = title;
 }
 
-<h1>@title</h1>
-<h4>Are you sure you want to delete @Model.Name?</h4>
-<hr />
+<div style="background-color: #000000; padding: 20px; margin: 20px; border-radius: 5px;">
+    <h1 style="color: #db3434;">@title</h1>
+    <h4 style="color: #cc2e2e;">Are you sure you want to delete @Model.Name?</h4>
+    <hr />
 
-<dl class = "row">
-    <dt class = "col-sm-2">
-        @Html.DisplayNameFor(model => model.Id)
-    </dt>
-    <dd class = "col-sm-10">
-        @Html.DisplayFor(model => model.Id)
-    </dd>
-    <dt class = "col-sm-2">
-        @Html.DisplayNameFor(model => model.Name)
-    </dt>
-    <dd class = "col-sm-10">
-        @Html.DisplayFor(model => model.Name)
-    </dd>
-    <dt class = "col-sm-2">
-        @Html.DisplayNameFor(model => model.Email)
-    </dt>
-    <dd class = "col-sm-10">
-        @Html.DisplayFor(model => model.Email)
-    </dd>
-</dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            <strong>@Html.DisplayNameFor(model => model.Id)</strong>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            <strong>@Html.DisplayNameFor(model => model.Name)</strong>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            <strong>@Html.DisplayNameFor(model => model.Email)</strong>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
 
-<form asp-action = "Delete">
-    <input type = "submit" value = "Delete" class = "btn btn-danger" /> |
-    <a asp-action = "Index">Back to List</a>
-</form>
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" style="color: #2e6bcc;">Back to List</a>
+    </form>
+</div>

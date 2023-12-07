@@ -51,56 +51,56 @@ namespace GeneralStoreMVC.Data.Migrations
                         new
                         {
                             Id = 1001,
-                            Email = "batman4ever@wayne.org",
-                            Name = "Wayne Enterprises"
+                            Email = "LouietheDog@indy.gov",
+                            Name = "Louie"
                         },
                         new
                         {
                             Id = 1002,
-                            Email = "scienceiscool@gmail.com",
-                            Name = "Palmer Technology"
+                            Email = "mowglithecat@yahoo.com",
+                            Name = "Mowgli"
                         },
                         new
                         {
                             Id = 1003,
-                            Email = "anvil4life@icloud.com",
-                            Name = "ACME Incorporated"
+                            Email = "lionelthecat@indy.gov",
+                            Name = "Lionel"
                         },
                         new
                         {
                             Id = 1004,
-                            Email = "thejokerrises@outlool.com",
-                            Name = "Ace Chemicals"
+                            Email = "Miltonthecat@indy.gov",
+                            Name = "Milton"
                         },
                         new
                         {
                             Id = 1005,
-                            Email = "greenarrow98@queenindustries.org",
-                            Name = "Queen Industries"
+                            Email = "germayne.curry@yahoo.com",
+                            Name = "Germayne Curry"
                         },
                         new
                         {
                             Id = 1006,
-                            Email = "greenarrow98@queenindustries.org",
-                            Name = "Queen Industries"
+                            Email = "Demetrius.sass@hotmail.com",
+                            Name = "Dj"
                         },
                         new
                         {
                             Id = 1007,
-                            Email = "ironman@marvel.org",
-                            Name = "Tony Stark"
+                            Email = "Mikeward62@gmail.com",
+                            Name = "Mike Ward"
                         },
                         new
                         {
                             Id = 1008,
-                            Email = "friendlyspider@marvel.org",
-                            Name = "Peter Parker"
+                            Email = "Testemail@yahoo.com",
+                            Name = "Test"
                         },
                         new
                         {
                             Id = 1009,
-                            Email = "hulkoutgreen@marvel.org",
-                            Name = "Bruce Banner"
+                            Email = "Jackson5@yahoo.com",
+                            Name = "Michael Jackson"
                         });
                 });
 
@@ -131,77 +131,77 @@ namespace GeneralStoreMVC.Data.Migrations
                         new
                         {
                             Id = 1001,
-                            Name = "Apple Airpods Max",
+                            Name = "Glock 19",
                             Price = 499.99000000000001,
                             QuantityInStock = 98
                         },
                         new
                         {
                             Id = 1002,
-                            Name = "Apple Airpods Pro",
+                            Name = "Duty Belt",
                             Price = 199.99000000000001,
                             QuantityInStock = 48
                         },
                         new
                         {
                             Id = 1003,
-                            Name = "Apple MacBook Pro 14 M3 Pro",
+                            Name = "Police Car",
                             Price = 1999.99,
                             QuantityInStock = 61
                         },
                         new
                         {
                             Id = 1004,
-                            Name = "Ipad Pro 12.9",
+                            Name = "X26 Taser",
                             Price = 1299.99,
                             QuantityInStock = 78
                         },
                         new
                         {
                             Id = 1005,
-                            Name = "Ipad 10.9 10th Gen",
+                            Name = "OCSC",
                             Price = 499.99000000000001,
                             QuantityInStock = 50
                         },
                         new
                         {
                             Id = 1006,
-                            Name = "Playstation 5",
+                            Name = "Glock 17",
                             Price = 499.99000000000001,
                             QuantityInStock = 55
                         },
                         new
                         {
                             Id = 1007,
-                            Name = "The Amazing Spiderman 2",
+                            Name = "Baton",
                             Price = 69.989999999999995,
                             QuantityInStock = 35
                         },
                         new
                         {
                             Id = 1008,
-                            Name = "Diablo IV",
+                            Name = "Mag Pouch",
                             Price = 69.989999999999995,
                             QuantityInStock = 42
                         },
                         new
                         {
                             Id = 1009,
-                            Name = "Horizon Forbidden West Complete Edition",
+                            Name = "Nylon Mag Pouch",
                             Price = 69.989999999999995,
                             QuantityInStock = 101
                         },
                         new
                         {
                             Id = 1010,
-                            Name = "PS5 Purple Controller",
+                            Name = "Radio Holster",
                             Price = 69.989999999999995,
                             QuantityInStock = 108
                         },
                         new
                         {
                             Id = 1011,
-                            Name = "Nintendo Switch",
+                            Name = "Body Camera",
                             Price = 299.99000000000001,
                             QuantityInStock = 104
                         });

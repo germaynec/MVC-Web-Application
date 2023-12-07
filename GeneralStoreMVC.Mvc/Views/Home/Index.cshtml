@@ -1,10 +1,204 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<body id ="HomepageBody">
-<img src="" alt="">
-<div class="text-center">
-    <h1 class="display-4">Welcome to the BL General Store</h1>
-    <p>Follow us on <a href="https://www.facebook.com" class = "text-warning">Facebook</a>.</p>
-</div>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        .fancy-text {
+            color: #0937ef;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .product-box {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            margin: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product-box img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product-box:hover {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .product-box:hover .overlay {
+            opacity: 1;
+        }
+
+        .product-details {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            text-align: center;
+            border: 1px solid #000000; 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 10px;
+        }
+
+        .sale-banner {
+            background-color: #050799;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="HomepageBody">
+    <div class="container text-center my-4">
+        <h1 class="display-3 fancy-text">Welcome to the Cop Shop</h1>
+    </div>
+
+    <div class="container text-center mb-4">
+        <div class="alert alert-danger sale-banner" role="alert">
+            <strong>SITE WIDE SALE!</strong> 30% OFF through December 7th.
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+           
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-box">
+                    <img src="https://tse3.explicit.bing.net/th?id=OIP.xI0DCgaLsV07aTzY45FC5gHaE8&pid=Api&P=0&h=220"
+                        class="img-fluid" alt="Glock 19s">
+                    <div class="overlay"></div>
+                    <div class="product-details">
+                        <h5 class="product-title">Glock 19s</h5>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-box">
+                    <img src="https://vinjatek-9fcd.kxcdn.com/wp-content/uploads/2017/04/B97036A4-F03C-43A7-ABCB-0A8E4D090DEE.jpeg"
+                        class="img-fluid" alt="Batons">
+                    <div class="overlay"></div>
+                    <div class="product-details">
+                        <h5 class="product-title">Batons</h5>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-box">
+                    <img src="https://www.thesoldiersproject.org/wp-content/uploads/2021/10/tactical-duty-belts.jpg"
+                        class="img-fluid" alt="Duty Belts">
+                    <div class="overlay"></div>
+                    <div class="product-details">
+                        <h5 class="product-title">Duty Belts</h5>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-box">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.k_NAn7VRCaeNRZTdMPHZxwHaFj&pid=Api&P=0&h=220"
+                        class="img-fluid" alt="X26 Taser">
+                    <div class="overlay"></div>
+                    <div class="product-details">
+                        <h5 class="product-title">X26 Taser</h5>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-box">
+                    <img src="https://i.ebayimg.com/images/g/NBcAAOSw0Rxk5yBR/s-l1600.jpg" class="img-fluid"
+                        alt="Nylon Mag Pouches">
+                    <div class="overlay"></div>
+                    <div class="product-details">
+                        <h5 class="product-title">Nylon Mag Pouches</h5>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-box">
+                    <img src="https://i5.walmartimages.com/asr/d8cabc76-b617-4d0b-ad2a-da2194ff3261.aa7ac435d98ab59dcb25dd1b18501bed.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff"
+                        class="img-fluid" alt="Pepper Sprays">
+                    <div class="overlay"></div>
+                    <div class="product-details">
+                        <h5 class="product-title">Pepper Sprays</h5>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-box">
+                    <img src="https://soldiersystems.net/wp-content/uploads/2012/09/20120915-210744.jpg" class="img-fluid"
+                        alt="Body Armors">
+                    <div class="overlay"></div>
+                    <div class="product-details">
+                        <h5 class="product-title">Body Armors</h5>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-box">
+                    <img src="https://s-media-cache-ak0.pinimg.com/originals/cf/32/80/cf32804ab8f5636dba49414ab57c839b.jpg"
+                        class="img-fluid" alt="Police Cars">
+                    <div class="overlay"></div>
+                    <div class="product-details">
+                        <h5 class="product-title">Police Cars</h5>
+                        <p class="product-description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @section Scripts {
+        
+    }
 </body>
+
+</html>

@@ -4,48 +4,121 @@
     ViewData["Title"] = "Product Index";
 }
 
-<h1 class="text-center">All Products at BL's General Store</h1>
-<a class="text-warning" asp-action="Create">Add new Inventory</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #5f92c4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<table class="table table-striped-colums table-dark table-hover table-bordered border-danger">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QuantityInStock)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuantityInStock)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td class = "text-info">
-                <a asp-controller="Product" asp-action="Edit" asp-route-id="@item.Id" class="text-danger">Edit</a> |
-                <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id" class="text-warning">Details</a> |
-                <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" class="text-success">Delete</a> 
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        h1 {
+            color: #0937ef;
+            text-align: center;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            box-shadow: 0 4px 6px rgba(202, 30, 30, 0.1);
+        }
+
+        th {
+            padding: 12px;
+            text-align: left;
+            background-color: #d9dde0;
+            color: #fff;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #0d7cec;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #0620c5;
+        }
+
+        .text-info a:hover {
+            color: #0056b3;
+        }
+
+        .text-danger a:hover {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cop Shop Gear</h1>
+        <a asp-action="Create">Add new Inventory</a>
+
+        <table class="table table-striped-colums table-hover table-bordered border">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.QuantityInStock)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="table-row">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.QuantityInStock)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td class="text-info">
+                            <a asp-controller="Product" asp-action="Edit" asp-route-id="@item.Id" class="">Edit</a> |
+                            <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id" class="">Details</a> |
+                            <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" class="text-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

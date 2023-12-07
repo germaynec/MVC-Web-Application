@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 builder.Services.AddDbContext<GeneralStoreDbContext>(options => options.UseSqlServer(
-    builder.Configuration.GetConnectionString("GeneralStoreLocalDb:")
+    builder.Configuration.GetConnectionString("EcommerceSite")
 ));
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICustomerService, CustomerService>();

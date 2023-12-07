@@ -1,51 +1,125 @@
 @model IEnumerable<GeneralStoreMVC.Models.CustomerModels.CustomerIndex>
 
 @{
-    ViewData["Title"] = " Customer Index";
+    ViewData["Title"] = "Customer Index";
 }
 
-<h1 class="text-center">All Customers for BL's General Store</h1>
-<a class="text-warning" asp-action="Create">Create A New Customer</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<style>
+    body {
+        background-color: #f8f9fa;
+        color: #d6e3f0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-<div>
-    <table class="table table-striped-colums table-dark table-hover table-bordered border-danger">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Id)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Email)
-                </th>
-                <th>
-                    &nbsp;
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var customer in Model)
-            {
-                <tr>
-                    <td>
-                        @customer.Id
-                    </td>
-                    <td>
-                        @customer.Name
-                    </td>
-                    <td>
-                        @customer.Email
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", "Customer", new { id = customer.Id }) |
-                        @Html.ActionLink("Details", "Details", "Customer", new { id = customer.Id }) |
-                        @Html.ActionLink("Delete", "Delete", "Customer", new { id = customer.Id })
+    h1 {
+        color: #0937ef; 
+        text-align: center;
+        margin-top: 30px;
+        font-weight: bold; 
+    }
 
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #0056b3;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    th {
+        padding: 12px;
+        text-align: left;
+        background-color: #d9dde0;
+        color: #fff;
+    }
+
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+        color: #fff; 
+    }
+
+    tr:hover {
+        background-color: #06147d;
+    }
+
+    .action-links a {
+        margin-right: 10px;
+        color: #007bff;
+    }
+
+    .action-links a:hover {
+        color: #0056b3;
+    }
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>The Cop Shop Clients</h1>
+        <a class="" asp-action="Create">Create A New Customer</a>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var customer in Model)
+                    {
+                        <tr>
+                            <td>
+                                @customer.Id
+                            </td>
+                            <td>
+                                @customer.Name
+                            </td>
+                            <td>
+                                @customer.Email
+                            </td>
+                            <td class="action-links">
+                                @Html.ActionLink("Edit", "Edit", "Customer", new { id = customer.Id }) |
+                                @Html.ActionLink("Details", "Details", "Customer", new { id = customer.Id }) |
+                                @Html.ActionLink("Delete", "Delete", "Customer", new { id = customer.Id })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

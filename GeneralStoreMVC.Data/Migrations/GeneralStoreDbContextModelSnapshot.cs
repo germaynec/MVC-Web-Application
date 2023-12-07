@@ -128,77 +128,77 @@ namespace GeneralStoreMVC.Data.Migrations
                         new
                         {
                             Id = 1001,
-                            Name = "Apple Airpods Max",
+                            Name = "Glock 19",
                             Price = 499.99000000000001,
                             QuantityInStock = 98
                         },
                         new
                         {
                             Id = 1002,
-                            Name = "Apple Airpods Pro",
+                            Name = "Duty Belt",
                             Price = 199.99000000000001,
                             QuantityInStock = 48
                         },
                         new
                         {
                             Id = 1003,
-                            Name = "Apple MacBook Pro 14 M3 Pro",
+                            Name = "Police Car",
                             Price = 1999.99,
                             QuantityInStock = 61
                         },
                         new
                         {
                             Id = 1004,
-                            Name = "Ipad Pro 12.9",
+                            Name = "X26 Taser",
                             Price = 1299.99,
                             QuantityInStock = 78
                         },
                         new
                         {
                             Id = 1005,
-                            Name = "Ipad 10.9 10th Gen",
+                            Name = "OCSC",
                             Price = 499.99000000000001,
                             QuantityInStock = 50
                         },
                         new
                         {
                             Id = 1006,
-                            Name = "Playstation 5",
+                            Name = "Glock 17",
                             Price = 499.99000000000001,
                             QuantityInStock = 55
                         },
                         new
                         {
                             Id = 1007,
-                            Name = "The Amazing Spiderman 2",
+                            Name = "Baton",
                             Price = 69.989999999999995,
                             QuantityInStock = 35
                         },
                         new
                         {
                             Id = 1008,
-                            Name = "Diablo IV",
+                            Name = "Mag Pouch",
                             Price = 69.989999999999995,
                             QuantityInStock = 42
                         },
                         new
                         {
                             Id = 1009,
-                            Name = "Horizon Forbidden West Complete Edition",
+                            Name = "Nylonm Mag Pouch",
                             Price = 69.989999999999995,
                             QuantityInStock = 101
                         },
                         new
                         {
                             Id = 1010,
-                            Name = "PS5 Purple Controller",
+                            Name = "Radio Holster",
                             Price = 69.989999999999995,
                             QuantityInStock = 108
                         },
                         new
                         {
                             Id = 1011,
-                            Name = "Nintendo Switch",
+                            Name = "Body Camera",
                             Price = 299.99000000000001,
                             QuantityInStock = 104
                         });
