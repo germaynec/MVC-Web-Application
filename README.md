@@ -24,8 +24,7 @@ Getting Started
 Clone this repository.
 Configure the database connection string in appsettings.json.
 Run the application using dotnet run.
-Author
-Germayne Curry
+
 
 Feel free to explore, contribute, and customize the application to meet your specific requirements. If you have any questions or feedback, please contact [germayne.curry@gmail.com].
 
