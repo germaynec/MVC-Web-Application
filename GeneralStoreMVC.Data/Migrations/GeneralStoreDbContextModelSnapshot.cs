@@ -48,56 +48,56 @@ namespace GeneralStoreMVC.Data.Migrations
                         new
                         {
                             Id = 1001,
-                            Email = "batman4ever@wayne.org",
-                            Name = "Wayne Enterprises"
+                            Email = "LouietheDog@indy.gov",
+                            Name = "Louie"
                         },
                         new
                         {
                             Id = 1002,
-                            Email = "scienceiscool@gmail.com",
-                            Name = "Palmer Technology"
+                            Email = "mowglithecat@yahoo.com",
+                            Name = "Mowgli"
                         },
                         new
                         {
                             Id = 1003,
-                            Email = "anvil4life@icloud.com",
-                            Name = "ACME Incorporated"
+                            Email = "lionelthecat@indy.gov",
+                            Name = "Lionel"
                         },
                         new
                         {
                             Id = 1004,
-                            Email = "thejokerrises@outlool.com",
-                            Name = "Ace Chemicals"
+                            Email = "Miltonthecat@indy.gov",
+                            Name = "Milton"
                         },
                         new
                         {
                             Id = 1005,
-                            Email = "greenarrow98@queenindustries.org",
-                            Name = "Queen Industries"
+                            Email = "germayne.curry@yahoo.com",
+                            Name = "Germayne Curry"
                         },
                         new
                         {
                             Id = 1006,
-                            Email = "greenarrow98@queenindustries.org",
-                            Name = "Queen Industries"
+                            Email = "Demetrius.sass@hotmail.com",
+                            Name = "Dj"
                         },
                         new
                         {
                             Id = 1007,
-                            Email = "ironman@marvel.org",
-                            Name = "Tony Stark"
+                            Email = "Mikeward62@gmail.com",
+                            Name = "Mike Ward"
                         },
                         new
                         {
                             Id = 1008,
-                            Email = "friendlyspider@marvel.org",
-                            Name = "Peter Parker"
+                            Email = "Testemail@yahoo.com",
+                            Name = "Test"
                         },
                         new
                         {
                             Id = 1009,
-                            Email = "hulkoutgreen@marvel.org",
-                            Name = "Bruce Banner"
+                            Email = "Jackson5@yahoo.com",
+                            Name = "Michael Jackson"
                         });
                 });
 
