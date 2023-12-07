@@ -13,9 +13,9 @@
             background-image: url('https://haverblog-media.s3.amazonaws.com/wp-content/uploads/2021/10/15151055/blog-ethics-and-use-of-mathematics-aj-colores-unsplash-1-2240x1493.jpg');
             background-size: cover;
             color: white;
-            cursor: crosshair; /* Set the cursor to crosshair */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
+            cursor: crosshair;
+            margin: 0;
+            padding: 0;
         }
 
         .navbar {
@@ -57,6 +57,19 @@
         .footer a:hover {
             color: #007bff;
         }
+
+        
+        #audio-container {
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+
+        #audio-controls {
+            display: inline-block;
+            margin: 10px;
+            
+        }
     </style>
 </head>
 
@@ -94,6 +107,18 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    </div>
+
+    
+    <div id="audio-container">
+        <audio id="audio-player" controls>
+            <source src="~/audio/Inner Circle - Bad Boys (COPS theme song)219275-1efae287-f275-499c-8ef5-878aa3795aed.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="audio-controls">
+            <button>Play</button>
+            <button>Pause</button>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">

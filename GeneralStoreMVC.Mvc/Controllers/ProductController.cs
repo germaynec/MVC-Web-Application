@@ -17,10 +17,10 @@ namespace GeneralStoreMVC.Mvc.Controllers
             _productService = productService;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             List<ProductIndex> products = await _productService.GetAllProductAsync();
-
             return View(products);
         }
 
@@ -84,13 +84,14 @@ namespace GeneralStoreMVC.Mvc.Controllers
 
             if (!product)
             {
-                ViewData["ErrorMsg"] = "Unable to save to the Databas. Please try agian.";
+                ViewData["ErrorMsg"] = "Unable to save to the Database. Please try again.";
                 return RedirectToAction(nameof(Index));
             }
 
             return RedirectToAction("Details", new { id = model.Id });
         }
 
+        [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
             if (!ModelState.IsValid)
